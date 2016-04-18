@@ -792,8 +792,11 @@ static uint8_t radio_mode = 0;
 static uint8_t radio_present = 0;
 static uint8_t pkt_max_len = 32;
 
-#define CE_DDR		DDRC
-#define CE_PORT		PORTC
+#warning Make sure pin config matches hardware setup.
+#warning Here CE  = PIN9  (PORTB1)
+#warning Here CSN = PIN10 (PORTB2)
+#define CE_DDR		DDRB
+#define CE_PORT		PORTB
 #define CSN_DDR		DDRB
 #define CSN_PORT	PORTB
 #define CE_PIN		(1 << 1)
